@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Meu Portfólio')</title>
-    <link rel="icon" href="{{ asset('favicon.ico') }}" />
+    <title>@yield('title', 'Portfólio do ' . env('GITHUB_USERNAME', 'Usuário'))</title>
+    <link rel="icon" href="{{ asset('public/favicon.ico') }}" />
     @vite('resources/css/app.css')
     @stack('head')
 </head>
@@ -34,7 +34,27 @@
             @yield('content')
         </main>
     </div>
-
+    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-12 py-6">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+            <div class="text-sm text-gray-500 dark:text-gray-300 mb-4 md:mb-0">
+                &copy; {{ date('Y') }} {{ env('APP_NAME') }}. Todos os direitos reservados.
+            </div>
+            <div class="flex gap-4">
+                <a href="/" class="inline-flex items-center px-3 py-1 rounded-md text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                    Início
+                </a>
+                <a href="/aboutme" class="inline-flex items-center px-3 py-1 rounded-md text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                    Portfólio
+                </a>
+                <a href="/contato" class="inline-flex items-center px-3 py-1 rounded-md text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                    Contato
+                </a>
+                <a href="https://github.com/{{ env('GITHUB_USERNAME') }}" target="_blank" rel="noopener" class="inline-flex items-center px-3 py-1 rounded-md text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </footer>
     @stack('scripts')
 </body>
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Meu Portfólio')</title>
+    <title>@yield('title', 'Portfólio')</title>
     <link rel="icon" href="{{ asset('favicon.ico') }}" />
     @vite('resources/css/app.css')
     @stack('head')
@@ -39,16 +39,16 @@
     </style>
     <main>
         <!-- Botão flutuante de voltar ao topo -->
-        <button id="btn-topo" aria-label="Voltar ao topo" class="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-blue-500 to-pink-500 text-white p-3 rounded-full shadow-lg transition-all duration-500 opacity-0 pointer-events-none scale-90 hover:scale-110 focus:outline-none" style="display:none">
+    <button id="btn-topo" aria-label="Voltar ao topo" class="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-blue-500 to-pink-500 p-3 rounded-full shadow-lg transition-all duration-500 opacity-0 pointer-events-none scale-90 hover:scale-110 focus:outline-none">
             <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path d="M12 19V5M5 12l7-7 7 7"/>
             </svg>
         </button>
         <!-- Seção 1: Bem-vindo -->
-        <section id="topo" class="section bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 text-white relative overflow-hidden">
+        <section id="topo" class="section bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 relative overflow-hidden">
             <div id="bg-topo" class="absolute inset-0 z-0 pointer-events-none"></div>
             <div class="relative z-10 flex flex-col items-center">
-                <h2 class="text-3xl md:text-5xl font-bold mb-4">Bem-vindo!</h2>
+                <h1 class="text-3xl md:text-5xl font-bold mb-4">Bem-vindo!</h1>
                 <p class="text-lg md:text-2xl font-medium mb-8 max-w-xl mx-auto drop-shadow">
                     Este é meu portfólio dedicado ao desenvolvimento e ao compartilhamento de conhecimentos.<br>
                     Explore projetos, ideias e dicas para evoluir na área de tecnologia.
@@ -87,7 +87,7 @@
                     Navegue pelos meus projetos.<br>
                     Cada seção foi pensada para ser simples e objetiva.
                 </p>
-                <a href="https://github.com/{{env('GITHUB_USERNAME')}}" target="_blank" rel="noopener" class="inline-block px-6 py-3 bg-gradient-to-r from-indigo-600 to-pink-500 text-white font-semibold rounded-lg shadow-md hover:from-pink-500 hover:to-indigo-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink-400">
+                <a href="https://github.com/{{env('GITHUB_USERNAME')}}" target="_blank" rel="noopener" class="inline-block px-6 py-3 bg-gradient-to-r text-center from-indigo-600 to-pink-500 font-semibold rounded-lg shadow-md hover:from-pink-500 hover:to-indigo-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink-400">
                     <svg class="inline-block w-5 h-5 mr-2 align-text-bottom" fill="currentColor" viewBox="0 0 24 24"></svg>
                         <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.74-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 2.9-.39c.98 0 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.27 5.7.42.36.79 1.08.79 2.18 0 1.57-.01 2.84-.01 3.23 0 .31.21.68.8.56C20.71 21.39 24 17.08 24 12c0-6.27-5.23-11.5-12-11.5z"/>
                     </svg>
@@ -109,7 +109,7 @@
                     Uma seleção dos meus melhores trabalhos, projetos e colaborações.<br>
                     Clique para ver detalhes ou explore mais abaixo!
                 </p>
-                <a href="/aboutme" class="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-500 text-white font-semibold rounded-lg shadow-md hover:from-purple-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 mb-8">
+                <a href="/aboutme" class="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-500 font-semibold rounded-lg shadow-md hover:from-purple-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 mb-8">
                     Sobre mim
                 </a>
                 <a href="#contato" class="arrow-down mt-8 text-3xl">
@@ -120,14 +120,14 @@
             </div>
         </section>
         <!-- Seção 5: Contato -->
-        <section id="contato" class="section bg-gradient-to-br from-pink-500 via-purple-500 to-blue-500 text-white relative overflow-hidden">
+        <section id="contato" class="section bg-gradient-to-br from-pink-500 via-purple-500 to-blue-500 relative overflow-hidden">
             <div id="bg-contato" class="absolute inset-0 z-0 pointer-events-none"></div>
             <div class="relative z-10 flex flex-col items-center">
                 <h2 class="text-3xl md:text-5xl font-bold mb-4">Vamos conversar?</h2>
                 <p class="text-lg md:text-xl max-w-2xl text-center mb-8">
                     Entre em contato para trocar ideias, colaborar em projetos ou simplesmente conversar sobre tecnologia!
                 </p>
-                <a href="/contato" class="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-500 text-white font-semibold rounded-lg shadow-md hover:from-purple-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 mb-8">
+                <a href="/contato" class="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-500 font-semibold rounded-lg shadow-md hover:from-purple-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 mb-8">
                     Contato
                 </a>
                 <a href="#topo" class="mt-8 text-2xl underline">Voltar ao topo</a>
@@ -142,11 +142,8 @@
         let hideTimeout = null;
 
         function showBtnTopo() {
-            btnTopo.style.display = 'block';
-            setTimeout(() => {
-                btnTopo.classList.add('opacity-100', 'pointer-events-auto');
-                btnTopo.classList.remove('opacity-0', 'pointer-events-none');
-            }, 10);
+            btnTopo.classList.add('opacity-100', 'pointer-events-auto');
+            btnTopo.classList.remove('opacity-0', 'pointer-events-none');
         }
         function hideBtnTopo(animate = true) {
             btnTopo.classList.remove('opacity-100', 'pointer-events-auto');
@@ -154,11 +151,9 @@
             if (animate) {
                 btnTopo.classList.add('translate-y-24');
                 hideTimeout = setTimeout(() => {
-                    btnTopo.style.display = 'none';
                     btnTopo.classList.remove('translate-y-24');
                 }, 500);
             } else {
-                btnTopo.style.display = 'none';
                 btnTopo.classList.remove('translate-y-24');
             }
         }

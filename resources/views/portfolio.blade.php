@@ -3,7 +3,7 @@
 
 <head>
     @extends('layouts.app')
-    @section('title', "Meu Portfólio")
+    @section('title')
 </head>
 
 <body class="bg-gray-100 text-gray-800 font-sans dark:bg-gray-900 dark:text-gray-100">
@@ -59,12 +59,6 @@
                 @endforelse
             </div>
         </section>
-
-        <footer>
-            <div class="mt-12 text-center text-sm text-gray-500 dark:text-gray-400">
-                <p>Feito com ❤️ por <a href="https://github.com/{{ env('GITHUB_USERNAME') }}" target="_blank">{{ env('GITHUB_USERNAME') }}</a></p>
-            </div>
-        </footer>
     </div>
 
     <script>

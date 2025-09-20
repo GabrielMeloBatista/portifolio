@@ -3,7 +3,7 @@
 
 <head>
     @extends('layouts.app')
-    @section('title', "Meu Portfólio")
+    @section('title', 'Contato')
 </head>
 
 <body class="bg-gray-100 text-gray-800 font-sans dark:bg-gray-900 dark:text-gray-100">
