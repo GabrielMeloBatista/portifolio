@@ -2,12 +2,15 @@
 <html lang="pt-br" class="dark:bg-gray-900 dark:text-gray-100">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio - {{ env('GITHUB_USERNAME') }}</title>
-    @vite('resources/css/app.css')
+    @extends('layouts.app')
+    @section('title', "Meu Portfólio")
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans dark:bg-gray-900 dark:text-gray-100">
+    @section('content')
     <style>
         /* Agrupa imagens lado a lado e reduz espaçamento entre elas na seção aboutMeHtml */
+        /* Precisa fazer assim por ser um markdown */
         .aboutme-markdown img {
             display: inline-block;
             margin: 0 0.25rem 0.5rem 0.25rem;
@@ -15,15 +18,7 @@
             height: auto;
             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
         }
-
-        .aboutme-markdown p {
-            margin-bottom: 0.5rem;
-        }
     </style>
-</head>
-
-<body class="bg-gray-100 text-gray-800 font-sans dark:bg-gray-900 dark:text-gray-100">
-
     <div class="container mx-auto p-8">
         <section>
             <header class="text-center mb-12">
@@ -55,7 +50,7 @@
                         <p class="text-gray-600 mb-4 dark:text-gray-300">{{ $repo['description'] ?? 'Sem descrição.' }}</p>
                     </div>
                     <div class="flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
-                        <span>{{ $repo['stargazers_count'] }}</span>
+                        <!-- <span>{{ $repo['stargazers_count'] }}</span> -->
                         <span>{{ $repo['language'] }}</span>
                     </div>
                 </div>
@@ -65,8 +60,12 @@
             </div>
         </section>
 
+        <footer>
+            <div class="mt-12 text-center text-sm text-gray-500 dark:text-gray-400">
+                <p>Feito com ❤️ por <a href="https://github.com/{{ env('GITHUB_USERNAME') }}" target="_blank">{{ env('GITHUB_USERNAME') }}</a></p>
+            </div>
+        </footer>
     </div>
-
 
     <script>
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -83,6 +82,7 @@
         });
     </script>
 
+    @endsection
 </body>
 
 </html>
