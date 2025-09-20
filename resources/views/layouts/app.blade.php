@@ -18,7 +18,7 @@
                 @yield('brand', env('APP_NAME', 'Portfólio'))
             </a>
             <nav class="flex flex-1 justify-end gap-4">
-                <a href="/portfolio" class="relative inline-flex items-center px-4 py-2 rounded-lg bg-gradient-to-r from-indigo-600 to-pink-500 text-white font-semibold shadow-md hover:from-pink-500 hover:to-indigo-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink-400">
+                <a href="/aboutme" class="relative inline-flex items-center px-4 py-2 rounded-lg bg-gradient-to-r from-indigo-600 to-pink-500 text-white font-semibold shadow-md hover:from-pink-500 hover:to-indigo-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-pink-400">
                     <span class="material-icons mr-2">work</span>
                     Portfólio
                 </a>
