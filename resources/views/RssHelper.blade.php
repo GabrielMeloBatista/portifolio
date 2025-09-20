@@ -8,6 +8,9 @@
 
 <body class="bg-gray-100 text-gray-800 font-sans dark:bg-gray-900 dark:text-gray-100">
     @section('content')
+    <h1 class="text-2xl md:text-5xl font-extrabold mb-4 text-center bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent drop-shadow-lg">
+        Visualizador de RSS
+    </h1>
     <p class="text-lg md:text-2xl font-medium mb-8 max-w-xl mx-auto drop-shadow">
         Por motivos de um projeto que não vou mencionar aqui, estou utilizando a biblioteca SimplePie para ler feeds RSS. Abaixo estão as últimas notícias obtidas do feed configurado.
         Estou usando o feed do Google News em português do Brasil para pegar as noticias.
