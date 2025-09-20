@@ -11,7 +11,7 @@
         <div class="container mx-auto py-8">
             <h1 class="text-4xl font-bold mb-4">Entre em Contato</h1>
             <p class="mb-8">Se você tiver alguma dúvida ou quiser entrar em contato, sinta-se à vontade para me enviar uma mensagem.</p>
-            <form action="#" method="POST" class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800 dark:shadow-lg">
+            <form action="mailto:{{env('MAIL_FROM_ADDRESS')}}" method="POST" class="bg-white p-6 rounded-lg shadow-md dark:bg-gray-800 dark:shadow-lg" enctype="text/plain">
             @csrf
             <div class="mb-4">
                 <label for="name" class="block text-sm font-medium">Nome</label>
