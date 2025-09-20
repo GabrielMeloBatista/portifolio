@@ -22,48 +22,48 @@ Veja um exemplo de uso deste modelo rodando localmente após a instalação.
 
 ### 1. **Clone o repositório:**
 
-    ```bash
-    git clone https://github.com/GabrielMeloBatista/portifolio.git
-    cd portifolio
-    ```
+```bash
+git clone https://github.com/GabrielMeloBatista/portifolio.git
+cd portifolio
+```
 
 ### 2. **Instale as dependências:**
 
-    ```bash
-    composer install
-    npm install
-    ```
+```bash
+composer install
+npm install
+```
 
 ### 3. **Configure o ambiente:**
 
-    - Copie o arquivo de exemplo:
-        [Clique aqui para ver o .env.example](./.env.example)
-    - Renomeie para `.env`:
+- Copie o arquivo de exemplo:
+    [Clique aqui para ver o .env.example](./.env.example)
+- Renomeie para `.env`:
 
-        ```bash
-        cp .env.example .env
-        ```
+```bash
+cp .env.example .env
+```
 
-    - Gere a chave da aplicação:
+- Gere a chave da aplicação:
 
-        ```bash
-        php artisan key:generate
-        ```
+```bash
+php artisan key:generate
+```
 
-    - Ajuste as variáveis do `.env` conforme necessário (APP_NAME, APP_URL, etc).
+- Ajuste as variáveis do `.env` conforme necessário (APP_NAME, APP_URL, etc).
 
 ### 4. **Rode as migrations (opcional):**
 
-    ```bash
-    php artisan migrate
-    ```
+```bash
+php artisan migrate
+```
 
 ### 5. **Inicie o servidor de desenvolvimento:**
 
-    ```bash
-    php artisan serve
-    npm run dev
-    ```
+```bash
+php artisan serve
+npm run dev
+```
 
 ### 6. **Acesse:**
 
@@ -89,6 +89,15 @@ Este modelo é open-source e pode ser utilizado livremente para fins pessoais e 
 ---
 
 Tem dúvidas ou sugestões? Abra uma issue ou entre em contato!
+
+## A Fazer
+
+- [ ] Pagina explicando o protocolo RS232
+- [ ] Shaders
+- [ ] Animação 3d
+- [ ] Algum esteregg sobre anime e hatsune miku sou um fan
+- [ ] Adicionar Kasane Teto
+    - [ ] TetoPear
 
 [![Laravel Logo](https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg)](https://laravel.com)
 
