@@ -1,3 +1,85 @@
+# Portfólio Laravel - Template Moderno
+
+Este projeto é um modelo básico e moderno de portfólio pessoal, criado com Laravel, Tailwind CSS e Blade. É ideal para desenvolvedores que desejam mostrar seus projetos, experiências e informações de contato de maneira responsiva e visualmente atraente.
+
+## Objetivo
+
+Fornecer uma base pronta para portfólios, facilitando a personalização e a rápida publicação de um site pessoal, com foco em responsividade, animações suaves e facilidade de uso.
+
+## Tecnologias Utilizadas
+
+- [Laravel 10+](https://laravel.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- Blade (motor de templates do Laravel)
+- Vite (ferramenta de build frontend)
+- PHP 8+
+
+## Demonstração
+
+Veja um exemplo de uso deste modelo rodando localmente após a instalação.
+
+## Como Configurar
+
+1. **Clone o repositório:**
+	```bash
+	git clone https://github.com/GabrielMeloBatista/portifolio.git
+	cd portifolio
+	```
+
+2. **Instale as dependências:**
+	```bash
+	composer install
+	npm install
+	```
+
+3. **Configure o ambiente:**
+	- Copie o arquivo de exemplo:
+	  [Clique aqui para ver o .env.example](./.env.example)
+	- Renomeie para `.env`:
+	  ```bash
+	  cp .env.example .env
+	  ```
+	- Gere a chave da aplicação:
+	  ```bash
+	  php artisan key:generate
+	  ```
+	- Ajuste as variáveis do `.env` conforme necessário (APP_NAME, APP_URL, etc).
+
+4. **Rode as migrations (opcional):**
+	```bash
+	php artisan migrate
+	```
+
+5. **Inicie o servidor de desenvolvimento:**
+	```bash
+	php artisan serve
+	npm run dev
+	```
+
+6. **Acesse:**
+	Abra [http://localhost:8000](http://localhost:8000) no navegador.
+
+## Estrutura do Projeto
+
+- `resources/views/` — Páginas Blade e layouts
+- `resources/css/` — Estilos com Tailwind
+- `routes/web.php` — Rotas principais
+- `public/` — Assets públicos
+
+## Personalização
+
+- Edite os arquivos em `resources/views/` para alterar textos, cores e seções.
+- Os efeitos de fundo e animações podem ser ajustados em `welcome.blade.php` e no CSS.
+- Adicione seus projetos e informações pessoais facilmente.
+
+## Licença
+
+Este modelo é open-source e pode ser utilizado livremente para fins pessoais e profissionais.
+
+---
+
+Tem dúvidas ou sugestões? Abra uma issue ou entre em contato!
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
