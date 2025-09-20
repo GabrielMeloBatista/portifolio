@@ -22,23 +22,26 @@
     </p>
 
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <div class="m-8 px-4 py-3 bg-gradient-to-r from-blue-50 via-gray-50 to-blue-100 rounded-lg shadow-inner border border-blue-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 dark:border-gray-700 flex items-center gap-2">
-        <input
-            id="rss-url-input"
-            type="text"
-            class="flex-1 border border-gray-300 rounded-md p-2 w-full dark:bg-gray-700 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            placeholder="Cole a URL do feed RSS aqui">
-        <button
-            id="load-feed-button"
-            type="button"
-            class="p-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center"
-            onclick="loadFeed()">
-            <span class="material-symbols-outlined">
-                search
-            </span>
-        </button>
+    <div class="max-w-3xl mx-auto">
+        <div class="m-8 px-4 py-3 bg-gradient-to-r from-blue-50 via-gray-50 to-blue-100 rounded-lg shadow-inner dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 dark:border-gray-700 flex items-center gap-2">
+            <input
+                id="rss-url-input"
+                type="text"
+                class="flex-1 border border-gray-300 rounded-md p-2 w-full dark:bg-gray-700 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                placeholder="Cole a URL do feed RSS aqui">
+            <button
+                id="load-feed-button"
+                type="button"
+                class="p-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center"
+                onclick="loadFeed()">
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </button>
+        </div>
+        <p id="rss-error" hidden class="text-red-500 text-lg p-2"> Insira um valor valido</p>
     </div>
-
+    <br>
     <div class="flex flex-col items-center mb-8">
         <h2 class="text-3xl font-extrabold mb-2 text-center bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent drop-shadow-lg">
             Últimas Notícias
@@ -68,7 +71,6 @@
     </div>
     @endsection
     <script>
-        
         function isValidUrl(string) {
             try {
                 new URL(string);
@@ -77,13 +79,21 @@
                 return false;
             }
         }
-        
+
         function loadFeed() {
             const urlInput = document.getElementById('rss-url-input');
             const url = urlInput.value.trim();
-    
+
             if (isValidUrl(url)) {
                 window.location.href = '/rss?url=' + encodeURIComponent(url);
+            } else {
+                urlInput.style.borderColor = 'red';
+                document.getElementById('rss-error').hidden = false;
+                document.getElementById('rss-error').style.color = 'red';
+                setTimeout(() => {
+                    urlInput.style.borderColor = '';
+                    document.getElementById('rss-error').hidden = true;
+                }, 2000);
             }
         }
     </script>
