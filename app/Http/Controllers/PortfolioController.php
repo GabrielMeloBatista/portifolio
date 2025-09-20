@@ -42,7 +42,7 @@ class PortfolioController extends Controller
         $aboutMeHtml = Cache::remember($readmeCacheKey, now()->addMinutes(120), function () use ($githubUser, $githubToken) {
             // O repositório do perfil tem o mesmo nome do usuário
             $response = Http::withToken($githubToken)
-                ->get("https://api.github.com/repos/{$githubUser}/{$githubUser}/contents/README.md");
+                ->get("https://api.github.com/repos/{$githubUser}/{$githubUser}/contents/README.md?ref=main");
 
             if ($response->failed()) {
                 return '<p>Não foi possível carregar o conteúdo do Sobre Mim.</p>';
