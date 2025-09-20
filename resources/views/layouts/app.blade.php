@@ -49,6 +49,9 @@
                 <a href="/contato" class="inline-flex items-center px-3 py-1 rounded-md text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 transition">
                     Contato
                 </a>
+                <a href="/rss" class="inline-flex items-center px-3 py-1 rounded-md text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 transition">
+                    Rss Viewer
+                </a>
                 <a href="https://github.com/{{ env('GITHUB_USERNAME') }}" target="_blank" rel="noopener" class="inline-flex items-center px-3 py-1 rounded-md text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 transition">
                     GitHub
                 </a>
